@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--FoodListVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="FoodListVC" title="FoodVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" userLabel="FoodListVC" customClass="FoodListVC" customModule="eat_before" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eat before" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVA-ud-lfN">
+                                <rect key="frame" x="16" y="60" width="147.5" height="38.5"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cSa-dg-Hcl">
+                                <rect key="frame" x="0.0" y="128.5" width="414" height="767.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="115" id="KVA-1y-75s" customClass="TableViewCell" customModule="eat_before" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="115"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KVA-1y-75s" id="JKI-5N-aoK" customClass="TableViewCell" customModule="eat_before" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="115"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="foodNameLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcA-7f-MKd">
+                                                    <rect key="frame" x="36" y="27" width="342" height="61"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bcA-7f-MKd" firstAttribute="leading" secondItem="JKI-5N-aoK" secondAttribute="leadingMargin" constant="16" id="2yo-2h-ruc"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="bcA-7f-MKd" secondAttribute="trailing" constant="16" id="Fjd-na-JLY"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="bcA-7f-MKd" secondAttribute="bottom" constant="16" id="eiy-BV-Vq3"/>
+                                                <constraint firstItem="bcA-7f-MKd" firstAttribute="top" secondItem="JKI-5N-aoK" secondAttribute="topMargin" constant="16" id="yfX-cg-Mme"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="foodNameLabel" destination="bcA-7f-MKd" id="zsO-eF-O8d"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OWv-iD-MYb">
+                                <rect key="frame" x="354" y="60" width="44" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system" title=""/>
+                                <connections>
+                                    <action selector="addFoodButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="TC4-Qe-dyb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OWv-iD-MYb" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="2A2-dd-x1Z"/>
+                            <constraint firstItem="LVA-ud-lfN" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="GNR-0f-UlZ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="OWv-iD-MYb" secondAttribute="trailing" constant="16" id="L9D-Ik-9oe"/>
+                            <constraint firstAttribute="bottom" secondItem="cSa-dg-Hcl" secondAttribute="bottom" id="ScJ-ji-o9w"/>
+                            <constraint firstItem="cSa-dg-Hcl" firstAttribute="top" secondItem="LVA-ud-lfN" secondAttribute="bottom" constant="30" id="UEe-Qz-bhd"/>
+                            <constraint firstItem="LVA-ud-lfN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="aKb-8R-2mp"/>
+                            <constraint firstItem="cSa-dg-Hcl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="bky-ZV-cVD"/>
+                            <constraint firstItem="cSa-dg-Hcl" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="hZM-aL-Vxv"/>
+                            <constraint firstItem="cSa-dg-Hcl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="xaO-rF-gFh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="cSa-dg-Hcl" id="6uX-jx-JSP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="81.696428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
